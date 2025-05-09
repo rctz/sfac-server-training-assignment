@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.screen-wrapper {
+  flex: 0 0 80%;
+  padding:8px;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joystick-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.robot-canvas {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .screen-wrapper,
+  .joystick-wrapper {
+    width: 100%;
+    flex: unset;
+    padding: 1%;
+  }
+
+  .joystick-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+}
