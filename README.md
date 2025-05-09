@@ -21,20 +21,40 @@ git clone https://github.com/rctz/sfac-server-training-assignment.git
 cd sfac-server-training-assignment
 ```
 
-### 3. Create a new branch for your assignment
+### 3. Create a New Branch for Your Assignment
 
-Always create a new branch before starting any assignment to keep your work organized.
-Use this naming format:
+Before you start working on your assignment, **always create a new branch** from the `develop` branch. This keeps your work isolated, organized, and easier to review.
+
+#### 🧭 Step-by-Step Instructions
 
 ```bash
-git checkout -b feature/<feature-name>
+git checkout develop # Switch to the base branch
 ```
 
-Example:
+```bash
+git pull origin develop # Make sure you have the latest changes
+```
+
+```bash
+git checkout -b feature/<your-feature-name> # Create a new feature branch
+```
+
+✅ Examples
 
 ```bash
 git checkout -b feature/joystick-ui
+git checkout -b feature/emergency-stop-button
+git checkout -b feature/realtime-map-display
+git checkout -b doc/state-control
+git checkout -b test/binning-weight-calculation
 ```
+
+| Type     | Format                        | Examples                               |
+| -------- | ----------------------------- | -------------------------------------- |
+| Feature  | `feature/<short-description>` | `feature/map-sync`, `feature/ui-theme` |
+| Bug Fix  | `bug/<issue-description>`     | `bug/fix-map-lag`, `bug/ui-glitch`     |
+| Document | `doc/<urgent-fix>`            | `doc/rollback-api-error`               |
+| Test     | `test/<experiment>`           | `test/socket-latency-check`            |
 
 ### 4. Work on your assignment inside the designated folder
 
